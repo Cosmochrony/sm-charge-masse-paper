@@ -1,5 +1,5 @@
-This repository contains the source of the **Mass–Charge–Inertia** paper  
-[*Charge, Mass, and Inertia as Saturated Responses of a Pre-Geometric Relational Description*].
+This repository contains the source of paper _Charge, Mass, and Inertia as Saturated Responses of a Pre-Geometric 
+Relational Description_ (Cosmochrony paper E)
 
 This work develops a **structural and interpretative framework** in which mass, electric charge,
 and inertial response are understood as effective descriptors arising from saturation of response
