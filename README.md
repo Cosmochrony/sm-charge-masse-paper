@@ -1,4 +1,4 @@
-This repository contains the source of paper _Charge, Mass, and Inertia as Saturated Responses of a Pre-Geometric 
+This repository contains the source of paper _Charge, Mass, and Inertia as Saturated Responses in a Pre-Geometric
 Relational Description_ (Cosmochrony paper E)
 
 This work develops a **structural and interpretative framework** in which mass, electric charge,
@@ -99,6 +99,7 @@ It **does**:
 - identify saturation as a common structural origin
 
 ## Repository Contents
+
 ```
 paper/
 ├── pdf/ # Compiled paper PDF
