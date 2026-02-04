@@ -1,0 +1,68 @@
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl} % Math and Physical Sciences Numbered Reference Style
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{microtype}
+\usepackage{xparse}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+% Boxes
+\usepackage[most]{tcolorbox}
+% Plots (pgfplots provides axis/addplot)
+\usepackage{pgfplots}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.18}
+\NewDocumentCommand{\subsubsubsection}{s m}{%
+  \IfBooleanTF{#1}{\paragraph*{#2}}{\paragraph{#2}}%
+}
+\usetikzlibrary
+{arrows.meta, calc, fit, decorations.pathmorphing, decorations.pathreplacing, shapes.geometric, shadings, positioning,
+  decorations.markings, patterns}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\title[Cosmochrony]
+{Charge, Mass, and Inertia as Saturated Responses of a Pre-Geometric Relational Substrate}
+\author*[1]{\fnm{Jérôme} \sur{Beau}}\email{jerome.beau@cosmochrony.org}
+\affil*[1]{\orgname{Independent Researcher}, \country{France}}
+\date{}
+
+\input{abstract}
+
+\keywords
+{Pre-geometric frameworks; emergent spacetime; mass and charge; inertia; bounded response; non-injective projection;
+relational substrate; saturation mechanisms; Born–Infeld-type dynamics; foundations of physics}
+
+\begin{document}
+  \maketitle
+
+  \clearpage
+  \tableofcontents
+
+  \input{01-introduction/introduction}
+  \input{02-framework/framework}
+  \input{03-saturation/saturation}
+  \input{04-consistency/consistency}
+  \input{05-discussion/discussion}
+
+  \appendix
+
+  \section*{Appendices}
+
+    \backmatter
+
+    \bmhead{Acknowledgements}
+    The author acknowledges the use of large language models as a supportive tool
+    for refining language, structure, and internal consistency during the
+    development of this manuscript.
+    All conceptual contributions, theoretical choices, and interpretations remain the sole responsibility of the author.
+
+    \bibliography{references}
+
+\end{document}
