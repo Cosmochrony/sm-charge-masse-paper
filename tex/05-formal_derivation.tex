@@ -123,6 +123,69 @@
     Mass is therefore not a primitive substance, but the effective label of a persistent
     isotropic projective strain.
 
+  \subsection{Inertia as the linear limit of saturated update rates}
+    \label{subsec:inertia_update}
+
+    We now demonstrate that the second law of motion,
+    $F = ma$, emerges as the linear-response limit of a bounded projective update
+    process.
+    In the Cosmochrony framework, a change in the effective state of an observable
+    $x \in \mathcal{O}$ requires a reconfiguration of the underlying relational
+    substrate $\chi$.
+    This reconfiguration is limited by a finite projective bandwidth $B_{\Pi}$,
+    which provides a temporal manifestation of the saturation bound $b$.
+
+    Let $\mathcal{O}(t)$ denote the effective description of a physical system.
+    The rate at which this description can be updated in response to a relational
+    stress $\mathcal{F}$ is therefore bounded.
+    At the effective level, this constraint can be modeled by a saturated response
+    equation of the form
+    \begin{equation}
+      \frac{d^2 \mathcal{O}}{dt^2}
+      = a_{\star}\,
+      \mathcal{S}\!\left(
+                     \frac{\mathcal{F}}{m_{\mathrm{eff}} a_{\star}}
+      \right),
+      \label{eq:saturated_fma}
+    \end{equation}
+    where $m_{\mathrm{eff}} \sim b/c^2$ is the effective mass scale derived in
+    Section~\ref{subsec:isotropic_mass},
+    $a_{\star}$ is the characteristic acceleration associated with saturation,
+    and $\mathcal{S}$ is a smooth odd saturation function satisfying
+    $\mathcal{S}(x)\rightarrow x$ for $|x|\ll 1$ and
+    $|\mathcal{S}(x)|\rightarrow 1$ for $|x|\gg 1$.
+    A convenient representative choice is $\mathcal{S}(x)=\tanh(x)$, though the
+    specific functional form is not essential for the argument.
+
+    In the low-stress regime, $\mathcal{F} \ll m_{\mathrm{eff}} a_{\star}$,
+    Eq.~\eqref{eq:saturated_fma} reduces to
+    \begin{equation}
+      \frac{d^2 \mathcal{O}}{dt^2}
+      \approx a_{\star}
+      \left(
+        \frac{\mathcal{F}}{m_{\mathrm{eff}} a_{\star}}
+      \right)
+      = \frac{\mathcal{F}}{m_{\mathrm{eff}}},
+    \end{equation}
+    which recovers the Newtonian relation $F = m_{\mathrm{eff}} a$ as the first-order
+    expansion of the saturated response.
+    Inertia therefore appears not as a fundamental resistance to motion, but as the
+    linear scaling factor of a bounded projective update process.
+
+    Beyond the linear regime, when the required acceleration approaches
+    $a_{\star}$, the response saturates.
+    This reflects the impossibility of resolving arbitrarily rapid changes of the
+    relational configuration within a finite projective bandwidth.
+    In this interpretation, inertia is the temporal lag of the projection $\Pi$:
+    it measures the finite time required for the effective description to track a
+    change in the underlying relational structure.
+
+    The existence of a characteristic acceleration scale $a_{\star}$ thus follows
+    directly from the bounded-response hypothesis.
+    In low-density or weakly constrained environments, this scale can dominate the
+    effective dynamics, naturally producing deviations from linear inertia while
+    preserving the Newtonian limit at high accelerations.
+
   \subsection{Oriented saturation and the emergence of a local $U(1)$ symmetry}
     \label{subsec:oriented_u1}
 
@@ -170,8 +233,7 @@
     Charge is therefore not postulated as an intrinsic property, but labels a symmetry class
     of bounded projective response.
 
-  \subsection{Inertia as projective drag and finite observational bandwidth}
-    \label{subsec:inertia_drag}
+    This dynamical formulation admits a direct interpretation in terms of finite projective bandwidth.
 
     Finally, we connect inertial response to a finite update bandwidth of the projection.
     Let $B_{\Pi}$ denote the maximal rate at which the projected description can update
