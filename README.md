@@ -1,7 +1,7 @@
 This repository contains the source of paper _Charge, Mass, and Inertia as Saturated Responses in a Pre-Geometric
 Relational Description_ (Cosmochrony paper E)
 
-This work develops a **structural and interpretative framework** in which mass, electric charge,
+This work develops a **structural and effective interpretative framework** in which mass, electric charge,
 and inertial response are understood as effective descriptors arising from saturation of response
 under non-injective projection.
 
@@ -22,10 +22,11 @@ The framework developed in this work is based on the following central statement
    When relational variations exceed the resolving capacity of this projection, effective responses
    become bounded.
 
-3. **Symmetry distinguishes physical properties**
-    - isotropic saturated response corresponds to mass
+3. **Symmetry distinguishes minimal physical properties**
+     - isotropic saturated response corresponds to mass
     - oriented saturated response corresponds to electric charge
     - finite-resolution response under acceleration corresponds to inertia
+    These symmetry classes establish existence and internal consistency rather than completeness.
 
 4. **Standard Model dynamics remains unchanged**  
    The framework does not modify gauge structure, particle content, or dynamical equations.
@@ -85,6 +86,7 @@ This work is:
 - **interpretative rather than dynamical**
 - **conceptual rather than predictive**
 - **agnostic** about the microscopic realization of the relational description
+- adopts minimal effective closures where microscopic derivations are not specified
 
 It does **not**:
 
