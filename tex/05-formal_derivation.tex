@@ -3,11 +3,21 @@
 
   This section adds the minimal mathematical structure missing from the current manuscript.
   It provides an explicit effective action for the projected relaxation degree of freedom and
-  derives mass-like and charge-like symmetry classes as consequences of a finite projective
+  derives mass-like, charge-like, and inertial responses as consequences of a finite projective
   capacity.
   The goal is not to postulate new fundamental fields, but to demonstrate that a bounded
   relational update flux necessarily induces a Born--Infeld-type effective completion in the
   observable description.
+
+  \paragraph{Scope of Section 5.}
+    This section provides a minimal effective derivation of mass-like, charge-like, and inertial
+    responses from bounded projective capacity.
+    The goal is to establish existence and internal consistency of the saturated-response
+    mechanism.
+    Completeness with respect to the full Standard Model gauge structure is not claimed at this
+    stage, and is deferred to higher-rank oriented saturation analyses.
+    Whenever a step is presented as an effective closure rather than a microscopic derivation, we
+    state it explicitly and indicate the corresponding derivation program.
 
   \subsection{Relational flux and projective capacity}
     \label{subsec:relational_flux}
@@ -58,8 +68,7 @@
       + \mathcal{O}\!\left(b^{-4}\right),
       \label{eq:dbi_expansion}
     \end{equation}
-    so that the unsaturated regime reproduces the standard linear-response kinetic term,
-    with nonlinear corrections suppressed by the saturation scale $b$.
+    so that the unsaturated regime reproduces the standard linear-response kinetic term.
 
   \subsection{Isotropic saturation and the emergence of a mass scale}
     \label{subsec:isotropic_mass}
@@ -72,23 +81,32 @@
     \end{equation}
     rather than through direction-dependent tensor components.
 
-    Equation~\eqref{eq:lagrangian_dbi_scalar} alone does not generate a mass term.
-    A mass scale appears when isotropic saturation locks the system near a finite-flux
-    background.
-    We model this locking by requiring that the projected description maintains a preferred
-    saturation level $X_{\star}$ through a weak restoring term representing the elastic cost
-    of reconfiguring an already saturated relational neighborhood.
-    The minimal effective completion reads
+    Equation~\eqref{eq:lagrangian_dbi_scalar} alone enforces boundedness but does not generate a
+    mass gap.
+    A mass scale appears when isotropic saturation selects a typical finite-flux background
+    around which fluctuations are defined.
+    In a projection-limited regime, the observable invariant $X$ summarizes many unresolved
+    relational configurations.
+    Under a fixed capacity bound, coarse-graining generically produces concentration of measure
+    around a typical saturation value.
+    The effective equilibrium is therefore not at $X=0$, but at a saturation-typical stasis level
+    $X_{\star}$.
+
+    We encode this statistical rigidity by introducing the minimal local penalty on deviations
+    from the typical saturated value,
     \begin{equation}
       \mathcal{L}_{\mathrm{iso}}
       \equiv \mathcal{L}_{\mathrm{BI}}(\phi)
       - \frac{\kappa}{2}\left(X-X_{\star}\right)^2,
       \label{eq:iso_completion}
     \end{equation}
-    where $\kappa>0$ encodes the stiffness of the saturation constraint in the projected
-    description.
-    This term does not introduce an independent interaction channel.
-    It encodes the elastic response of the projection once saturation has been reached.
+    where $X_{\star}$ is not a new fundamental parameter.
+    It represents the typical saturation level selected by a maximum-entropy principle under the
+    capacity constraint.
+    The coefficient $\kappa>0$ quantifies the residual bandwidth, namely the variance of admissible
+    saturated microstates after projection.
+    This term does not introduce an independent interaction channel, but encodes the elastic
+    response of the projection once saturation has been reached.
 
     Let $\phi=\phi_0+\delta\phi$, with $X[\phi_0]=X_{\star}$.
     Linearizing the Euler--Lagrange equation for $\delta\phi$ yields a Klein--Gordon form
@@ -106,8 +124,8 @@
       \times \mathcal{Z}^{-1}(X_{\star},b),
       \label{eq:meff_general}
     \end{equation}
-    where $\mathcal{Z}(X_{\star},b)$ denotes the DBI renormalization of the kinetic term
-    evaluated on the saturated background.
+    where $\mathcal{Z}(X_{\star},b)$ denotes the DBI renormalization of the kinetic term evaluated
+    on the saturated background.
     As $X_{\star}\rightarrow b^2$, $\mathcal{Z}$ diverges, reflecting the progressive loss of
     sensitivity of the projected dynamics to further increases of relational flux.
     The resulting low-energy spectrum exhibits a finite gap with dispersion relation
@@ -116,30 +134,33 @@
       \label{eq:dispersion_gap}
     \end{equation}
 
-    Equation~\eqref{eq:dispersion_gap} provides the sought mathematical statement.
-    An isotropically saturated projected description admits a mass-like descriptor because
-    saturation induces an elastic strain with a finite energetic cost for local
+    An isotropically saturated projected description therefore admits a mass-like descriptor
+    because saturation induces an elastic strain with a finite energetic cost for local
     reconfiguration.
-    Mass is therefore not a primitive substance, but the effective label of a persistent
-    isotropic projective strain.
+    Mass appears as the effective label of a persistent isotropic projective strain.
 
   \subsection{Inertia as the linear limit of saturated update rates}
     \label{subsec:inertia_update}
 
-    We now demonstrate that the second law of motion,
-    $F = ma$, emerges as the linear-response limit of a bounded projective update
-    process.
-    In the Cosmochrony framework, a change in the effective state of an observable
-    $x \in \mathcal{O}$ requires a reconfiguration of the underlying relational
-    substrate $\chi$.
-    This reconfiguration is limited by a finite projective bandwidth $B_{\Pi}$,
-    which provides a temporal manifestation of the saturation bound $b$.
+    We now demonstrate that the second law of motion emerges as the linear-response limit of a
+    bounded projective update process.
+    The DBI structure implies bounded canonical momenta.
+    For a homogeneous mode, the time-like kinetic sector reads
+    \begin{equation}
+      \mathcal{L}_{\mathrm{BI}}
+      = b^2\left(1-\sqrt{1-\dot{\phi}^2/b^2}\right),
+    \end{equation}
+    yielding the conjugate momentum
+    \begin{equation}
+      p_{\phi}
+      = \frac{\partial \mathcal{L}_{\mathrm{BI}}}{\partial \dot{\phi}}
+      = \frac{\dot{\phi}}{\sqrt{1-\dot{\phi}^2/b^2}}.
+    \end{equation}
+    As $|\dot{\phi}|\rightarrow b$, the momentum cost diverges, so increasingly strong forcing
+    cannot indefinitely increase the effective update rate.
 
-    Let $\mathcal{O}(t)$ denote the effective description of a physical system.
-    The rate at which this description can be updated in response to a relational
-    stress $\mathcal{F}$ is therefore bounded.
-    At the effective level, this constraint can be modeled by a saturated response
-    equation of the form
+    At the level of an effective observable $\mathcal{O}(t)$, this bounded-update property is
+    captured by a saturated response law
     \begin{equation}
       \frac{d^2 \mathcal{O}}{dt^2}
       = a_{\star}\,
@@ -148,89 +169,49 @@
       \right),
       \label{eq:saturated_fma}
     \end{equation}
-    where $m_{\mathrm{eff}} \sim b/c^2$ is the effective mass scale derived in
-    Section~\ref{subsec:isotropic_mass},
-    $a_{\star}$ is the characteristic acceleration associated with saturation,
-    and $\mathcal{S}$ is a smooth odd saturation function satisfying
-    $\mathcal{S}(x)\rightarrow x$ for $|x|\ll 1$ and
-    $|\mathcal{S}(x)|\rightarrow 1$ for $|x|\gg 1$.
-    A convenient representative choice is $\mathcal{S}(x)=\tanh(x)$, though the
-    specific functional form is not essential for the argument.
+    where $\mathcal{S}$ is a smooth odd saturation function.
+    The choice $\mathcal{S}(x)=\tanh(x)$ is a convenient representative.
+    The structural prediction is the existence of a finite asymptotic acceleration.
 
-    In the low-stress regime, $F \ll m_{\mathrm{eff}} a_\star$,
-    Eq.~\eqref{eq:saturated_fma} reduces to
+    In the low-stress regime, Eq.~\eqref{eq:saturated_fma} reduces to
     \begin{equation}
       \frac{d^2 \mathcal{O}}{dt^2}
-      \approx a_{\star}
-      \left(
-        \frac{\mathcal{F}}{m_{\mathrm{eff}} a_{\star}}
-      \right)
-      = \frac{\mathcal{F}}{m_{\mathrm{eff}}},
+      \approx \frac{\mathcal{F}}{m_{\mathrm{eff}}},
     \end{equation}
-    which recovers the Newtonian relation $F = m_{\mathrm{eff}} a$ as the first-order
-    expansion of the saturated response.
-    Inertia therefore appears not as a fundamental resistance to motion, but as the
-    linear scaling factor of a bounded projective update process.
+    recovering the Newtonian relation as the first-order expansion of a bounded-response law.
+    Inertia thus appears as the linear scaling factor of a finite projective bandwidth.
 
-    Beyond the linear regime, when the required acceleration approaches
-    $a_{\star}$, the response saturates.
-    This reflects the impossibility of resolving arbitrarily rapid changes of the
-    relational configuration within a finite projective bandwidth.
-
-    This dynamical formulation admits a direct interpretation in terms of finite
-    observational resolvability.
-    Let $B_{\Pi}$ denote the maximal rate at which the projected description can
-    update observables.
-    For an effective observable $\mathcal{O}$, the minimal constraint reads
-    \begin{equation}
-      \left\lVert \frac{d\mathcal{O}}{dt} \right\rVert \leq B_{\Pi}.
-    \end{equation}
-    Equivalently, changes of the projection satisfy the scaling
-    \begin{equation}
-      \Delta\Pi \sim \frac{1}{b}\frac{d\mathcal{O}}{dt},
-    \end{equation}
-    where $b$ acts as a flux normalization converting an attempted rapid change of
-    the effective state into a finite projective strain.
-
-    In this interpretation, inertia is the temporal lag of the projection $\Pi$.
-    It measures the finite time required for the effective description to track a
-    change in the underlying relational structure.
-    The existence of a characteristic acceleration scale $a_{\star}$ thus follows
-    directly from the bounded-response hypothesis.
-    In low-density or weakly constrained environments, this scale can dominate the
-    effective dynamics, producing deviations from linear inertia while preserving
-    the Newtonian limit at high accelerations.
-
-  \subsection{Oriented saturation and the emergence of a local $U(1)$ symmetry}
+    \subsection{Oriented saturation and the emergence of a local $U(1)$ symmetry}
     \label{subsec:oriented_u1}
 
     We next consider the oriented class, in which saturation preserves a scalar bound while
-    allowing an internal phase degeneracy.
-    We introduce a complex relaxation mode
+    leaving an internal degeneracy.
+    If at least two relational degrees of freedom remain unresolved, the manifold of saturation-
+    preserving configurations is a compact connected one-dimensional space.
+    Up to homeomorphism, the unique such manifold without boundary is the circle $S^1$.
+
+    A minimal realization is therefore a two-component field
+    $\psi \equiv \phi_1+i\phi_2=\rho e^{i\theta}$,
     \begin{equation}
-      \psi \equiv \rho \, e^{i\theta},
+      \psi \equiv \rho \, e^{i\theta}.
       \label{eq:complex_mode}
     \end{equation}
-    and impose that saturation fixes the modulus $\rho$ near a preferred value
-    $\rho_{\star}$, while leaving the phase $\theta$ as a locally underdetermined coordinate
-    of the projection.
-    The projected description is therefore insensitive to local internal rotations,
-    expressed by the invariance
+    Saturation fixes $\rho$ near $\rho_{\star}$, while the phase $\theta$ remains locally
+    underdetermined.
+    The projected description is invariant under
     \begin{equation}
-      \theta(x)\rightarrow \theta(x)+\alpha(x).
+      \theta(x)\rightarrow \theta(x)+\alpha(x),
       \label{eq:local_phase}
     \end{equation}
+    which expresses a redundancy rather than a physical transformation.
 
-    Local invariance~\eqref{eq:local_phase} necessitates the introduction of a compensating
-    connection.
-    We define the covariant derivative
+    Local redundancy requires a compensating connection.
+    Introducing
     \begin{equation}
       D_{\mu}\psi \equiv \left(\partial_{\mu}-iqA_{\mu}\right)\psi,
       \label{eq:covariant_derivative}
     \end{equation}
-    so that $D_{\mu}\psi$ transforms covariantly under
-    $\psi\rightarrow e^{i\alpha(x)}\psi$.
-    The effective Lagrangian for the oriented saturated sector takes the minimal form
+    yields the minimal effective Lagrangian
     \begin{equation}
       \mathcal{L}_{\mathrm{ori}}
       = b^2\left(
@@ -239,27 +220,26 @@
       - \frac{1}{4}F_{\mu\nu}F^{\mu\nu},
       \label{eq:oriented_lagrangian}
     \end{equation}
-    where $F_{\mu\nu}\equiv \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$.
+    with $F_{\mu\nu}\equiv \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$.
+    The group generated by Eq.~\eqref{eq:local_phase} is $U(1)$.
+    Electric charge labels the Noether generator associated with this oriented saturation
+    redundancy.
 
-    The group implied by Eq.~\eqref{eq:local_phase} is $U(1)$, as it is the unique continuous
-    one-parameter compact symmetry preserving a scalar saturation bound.
-    In this construction, electric charge is the Noether generator associated with phase
-    rotations in the oriented saturated flux sector.
-    Charge is therefore not postulated as an intrinsic property, but labels a symmetry class
-    of bounded projective response.
-
-  \subsection{Immediate falsifiability}
+    \subsection{Immediate falsifiability}
     \label{subsec:falsifiability_bound}
 
-    The formalism above yields a direct falsifiability criterion.
-    The effective action~\eqref{eq:action_bi} ceases to define a real projected description
-    when the invariant exceeds the saturation bound,
+    The effective action~\eqref{eq:action_bi} ceases to define a real projected description when
+    the invariant exceeds the saturation bound,
     \begin{equation}
-      \partial_{\mu}\phi \, \partial^{\mu}\phi > b^2,
+      \partial_{\mu}\phi \, \partial^{\mu}\phi > b^2.
       \label{eq:bound_violation}
     \end{equation}
-    so the framework is ruled out if an experimentally established regime requires a
-    strictly linear, unsaturated continuation beyond the scale $b$ without any sign of
-    instability, saturation, or nonlinear completion.
-    Anchoring this bound to known strong-field thresholds provides a direct operational test
-    of the bounded-response hypothesis.
+    The framework is therefore ruled out if a strictly linear unsaturated continuation is
+    experimentally required beyond the scale $b$ without any sign of instability, saturation, or
+    nonlinear completion.
+
+    A second falsifiability channel is internal consistency across sectors.
+    If the same saturation scale $b$ underlies mass generation and oriented gauge response, then
+    the values of $b$ inferred from inertial, mass, and strong-field charge phenomena cannot be
+    chosen independently.
+    Failure of this cross-sector consistency falsifies the unified bounded-response hypothesis.
