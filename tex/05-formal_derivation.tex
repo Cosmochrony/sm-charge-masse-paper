@@ -1,0 +1,191 @@
+\section{Formal Derivation of Saturated Responses}
+  \label{sec:formal_derivation}
+
+  This section adds the minimal mathematical structure missing from the current manuscript.
+  It provides an explicit effective action for the projected relaxation degree of freedom and derives the
+  mass-like and charge-like symmetry classes as consequences of a finite projective capacity.
+  The goal is not to postulate new fundamental fields, but to show that a bounded relational update flux
+  forces a Born--Infeld-type effective completion in the observable description~:contentReference[oaicite:0]{index=0}.
+
+  \subsection{Relational flux and projective capacity}
+    \label{subsec:relational_flux}
+
+    We represent the local relational ``update'' content by a rank-two tensor density
+    \begin{equation}
+      J_{\mu\nu} \equiv \partial_{\mu}\phi \, \partial_{\nu}\phi,
+      \label{eq:relational_tensor}
+    \end{equation}
+    where $\phi$ is an effective scalar encoding the relaxation mode that remains after projection.
+    The essential assumption is that the projection $\Pi$ has a finite capacity.
+    Operationally, this means that the observable description cannot resolve arbitrarily large values of the
+    relational flux invariants constructed from $J_{\mu\nu}$.
+    We encode this limitation by introducing a saturation scale $b$ with dimensions of a flux density.
+
+    The minimal Lorentz-invariant completion that enforces boundedness while recovering the standard
+    quadratic kinetic term at low flux is the Dirac--Born--Infeld-type Lagrangian
+    \begin{equation}
+      \mathcal{L}_{\mathrm{BI}}(\phi)
+      \equiv b^2\left(1-\sqrt{1-\frac{\partial_{\mu}\phi \, \partial^{\mu}\phi}{b^2}}\right).
+      \label{eq:lagrangian_dbi_scalar}
+    \end{equation}
+    Equivalently, one may write the associated action as
+    \begin{equation}
+      S_{\Pi}[\phi]
+      = \int d^4x \, \mathcal{L}_{\mathrm{BI}}(\phi)
+      = -b^2 \int d^4x
+      \left(\sqrt{-\det\left(\eta_{\mu\nu}-b^{-2}\partial_{\mu}\phi \, \partial_{\nu}\phi\right)}-1\right),
+      \label{eq:action_bi}
+    \end{equation}
+    where the determinant form makes explicit that saturation is controlled by an effective stretching of
+    the metric volume element as the flux approaches $b$.
+
+    For weak gradients, $\partial\phi \ll b$, Eq.~\eqref{eq:lagrangian_dbi_scalar} expands as
+    \begin{equation}
+      \mathcal{L}_{\mathrm{BI}}(\phi)
+      = \frac{1}{2}\partial_{\mu}\phi \, \partial^{\mu}\phi
+      + \frac{1}{8b^2}\left(\partial_{\mu}\phi \, \partial^{\mu}\phi\right)^2
+      + \mathcal{O}\!\left(b^{-4}\right),
+      \label{eq:dbi_expansion}
+    \end{equation}
+    so that the unsaturated regime reproduces the standard linear-response kinetic term, with controlled
+    nonlinear corrections suppressed by $b$.
+
+  \subsection{Isotropic saturation and the emergence of a mass scale}
+    \label{subsec:isotropic_mass}
+
+    We now show how an effective mass scale arises when saturation is isotropic.
+    Isotropy here means that saturation is reached through a scalar invariant of the flux,
+    \begin{equation}
+      X \equiv \partial_{\mu}\phi \, \partial^{\mu}\phi,
+      \label{eq:kinetic_invariant}
+    \end{equation}
+    rather than through direction-dependent tensor components.
+
+    A key point is that Eq.~\eqref{eq:lagrangian_dbi_scalar} by itself does not generate a mass term.
+    A mass scale appears when isotropic saturation locks the system near a finite-flux background.
+    We model this lock by requiring that the projected description maintains a preferred saturation level
+    $X_{\star}$ through a weak restoring term that represents the cost of reconfiguring an already
+    saturated relational neighborhood.
+    The minimal effective completion is
+    \begin{equation}
+      \mathcal{L}_{\mathrm{iso}}
+      \equiv \mathcal{L}_{\mathrm{BI}}(\phi)
+      - \frac{\kappa}{2}\left(X-X_{\star}\right)^2,
+      \label{eq:iso_completion}
+    \end{equation}
+    where $\kappa>0$ encodes the stiffness of the saturation constraint in the projected description.
+    This term does not introduce a new interaction channel.
+    It encodes, at the level of $\mathcal{O}$, the fact that once projection saturates, departures from the
+    saturated configuration carry an energetic penalty.
+
+    Let $\phi=\phi_0+\delta\phi$, with $\phi_0$ such that $X[\phi_0]=X_{\star}$.
+    Linearizing the Euler--Lagrange equation for $\delta\phi$ yields a Klein--Gordon form
+    \begin{equation}
+      \left(\Box + m_{\mathrm{eff}}^2\right)\delta\phi = 0,
+      \label{eq:kg_effective}
+    \end{equation}
+    with an effective gap
+    \begin{equation}
+      m_{\mathrm{eff}}^2
+      = 2\kappa \, X_{\star}
+      \left.\left(\frac{\partial X}{\partial \phi}\right)^2\right|_{\phi_0}
+      \times \mathcal{Z}^{-1}(X_{\star},b),
+      \label{eq:meff_general}
+    \end{equation}
+    where $\mathcal{Z}(X_{\star},b)$ is the DBI renormalization of the kinetic term evaluated on the
+    saturated background.
+    In particular, $\mathcal{Z}$ diverges as $X_{\star}\rightarrow b^2$, reflecting the fact that the
+    projected dynamics becomes progressively insensitive to further increases of flux.
+    This produces a stable low-energy spectrum with a finite gap.
+    The corresponding relativistic dispersion relation reads
+    \begin{equation}
+      E^2 = p^2 c^2 + m_{\mathrm{eff}}^2 c^4.
+      \label{eq:dispersion_gap}
+    \end{equation}
+
+    Equation~\eqref{eq:dispersion_gap} provides the sought mathematical statement.
+    An isotropically saturated projected description admits a mass-like descriptor because saturation
+    creates a background strain with a finite energetic cost for local reconfiguration.
+    In this interpretation, mass is not a primitive substance.
+    Mass is the effective label of a persistent isotropic projective strain.
+
+  \subsection{Oriented saturation and the emergence of a local $U(1)$ symmetry}
+    \label{subsec:oriented_u1}
+
+    We next consider the oriented class, in which saturation preserves a scalar bound while allowing an
+    internal phase degeneracy.
+    We therefore introduce a complex relaxation mode
+    \begin{equation}
+      \psi \equiv \rho \, e^{i\theta},
+      \label{eq:complex_mode}
+    \end{equation}
+    and impose that saturation fixes the modulus $\rho$ near a preferred value $\rho_{\star}$ while leaving
+    the phase $\theta$ as a locally underdetermined coordinate of the projection.
+    This is precisely the situation in which the projected description becomes insensitive to an internal
+    rotation.
+    The minimal statement of this insensitivity is invariance under
+    \begin{equation}
+      \theta(x)\rightarrow \theta(x)+\alpha(x).
+      \label{eq:local_phase}
+    \end{equation}
+
+    Local invariance~\eqref{eq:local_phase} forces the appearance of a compensating connection.
+    One introduces a gauge field $A_{\mu}$ and the covariant derivative
+    \begin{equation}
+      D_{\mu}\psi \equiv \left(\partial_{\mu}-iqA_{\mu}\right)\psi,
+      \label{eq:covariant_derivative}
+    \end{equation}
+    so that $D_{\mu}\psi$ transforms covariantly under $\psi\rightarrow e^{i\alpha(x)}\psi$.
+    The effective Lagrangian for the oriented saturated sector then takes the minimal form
+    \begin{equation}
+      \mathcal{L}_{\mathrm{ori}}
+      = b^2\left(1-\sqrt{1-\frac{D_{\mu}\psi \, D^{\mu}\psi^{\ast}}{b^2}}\right)
+      - \frac{1}{4}F_{\mu\nu}F^{\mu\nu},
+      \label{eq:oriented_lagrangian}
+    \end{equation}
+    with $F_{\mu\nu}\equiv \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$.
+
+    The group implied by Eq.~\eqref{eq:local_phase} is $U(1)$, because the internal degeneracy is a single
+    compact phase degree of freedom preserving a scalar saturation bound.
+    In this construction, charge is the Noether generator associated with phase rotations in the saturated
+    flux sector.
+    Charge is therefore not postulated as an intrinsic property.
+    Charge labels the oriented symmetry class of a bounded projective response.
+
+  \subsection{Inertia as projective drag and finite observational bandwidth}
+    \label{subsec:inertia_drag}
+
+    Finally, we connect inertial response to a finite update bandwidth of the projection.
+    Let $B_{\Pi}$ denote the maximal rate at which the projected description can update observables.
+    For an observable $\mathcal{O}$, the minimal constraint reads
+    \begin{equation}
+      \left\lVert \frac{d\mathcal{O}}{dt} \right\rVert \leq B_{\Pi}.
+      \label{eq:bandwidth}
+    \end{equation}
+    Equivalently, changes of the projection satisfy the scaling
+    \begin{equation}
+      \Delta\Pi \sim \frac{1}{b}\frac{d\mathcal{O}}{dt},
+      \label{eq:delta_pi_drag}
+    \end{equation}
+    where $b$ plays the role of a flux normalization converting an attempted rapid change of the effective
+    state into a finite projective strain.
+
+    Inertial behavior arises when external forcing demands an update rate approaching the bound.
+    In that regime, the projected dynamics cannot follow instantaneously.
+    The resulting lag acts as an effective resistance to acceleration, consistent with the interpretation
+    of inertia as a response limited by finite projective capacity rather than as a primitive force.
+
+  \subsection{Immediate falsifiability}
+    \label{subsec:falsifiability_bound}
+
+    The formalism above yields a direct falsifiability criterion.
+    The effective action~\eqref{eq:action_bi} ceases to be real when the invariant exceeds the bound,
+    \begin{equation}
+      \partial_{\mu}\phi \, \partial^{\mu}\phi > b^2,
+      \label{eq:bound_violation}
+    \end{equation}
+    so the framework is ruled out if an experimentally well-defined regime requires a strictly linear,
+    unsaturated continuation beyond the scale $b$ without any sign of instability, saturation, or
+    nonlinear completion.
+    In the next revision, this criterion should be anchored to a physical lower bound on $b$ by tying it to
+    a known strong-field threshold, providing an operational test of the bounded-response hypothesis.
